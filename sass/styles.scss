@@ -148,7 +148,7 @@ a {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   ul.nav.d-flex.justify-content-right {
     display: none !important;
   }

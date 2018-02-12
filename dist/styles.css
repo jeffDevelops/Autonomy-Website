@@ -28,7 +28,7 @@ a:hover{color:#c2024f;transition:all .3s}
 .call_to_action:hover{color:#c2024f;transition:all .3s;letter-spacing:.05em;background-color:#fff;animation:transition_color 30s infinite}
 .navigation{position:fixed;z-index:1;width:100%;padding:25px;background:0}
 .navigation .logo{width:200px}
-@media screen and (max-width:400px){ul.nav.d-flex.justify-content-right{display:none !important}
+@media(max-width:400px){ul.nav.d-flex.justify-content-right{display:none !important}
 #city{width:450px;top:250px;left:-20px}
 .page_segue{top:530px}
 .hero_div{top:100px}
