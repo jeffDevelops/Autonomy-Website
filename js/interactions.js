@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       nav.classList.remove('scroll');
     }
+
+    if (window.innerWidth < 678 && window.pageYOffset < 500) {
+      nav.classList.remove('scroll');
+    }
   });
   
 

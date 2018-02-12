@@ -244,6 +244,10 @@ footer {
     font-size: 2em;
   }
 
+  .text {
+    text-align: left;
+  }
+
 }
 
 @media screen and (min-width: 401px) and (max-width: 678px) {
@@ -279,6 +283,10 @@ footer {
       width: 250px;
       margin: 25px auto;
     }
+  }
+
+  .text {
+    text-align: left;
   }
 }
 

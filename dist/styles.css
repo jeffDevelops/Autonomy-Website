@@ -44,6 +44,7 @@ div.d-flex.nav.justify-content-between{justify-content:center !important}
 .hero_div .call_to_action{float:none;width:250px;margin:25px auto}
 .page_segue{margin-top:520px}
 .section_heading{color:#c2024f;font-weight:600;font-size:2em}
+.text{text-align:left}
 }@media screen and (min-width:401px) and (max-width:678px){ul.nav.d-flex.justify-content-right{display:none !important}
 div.d-flex.nav.justify-content-between{justify-content:center !important}
 .page_segue{margin-top:540px}
@@ -51,5 +52,6 @@ div.d-flex.nav.justify-content-between{justify-content:center !important}
 .hero_div{top:150px;width:80%}
 .hero_div .hero_text{text-align:center;font-size:3em}
 .hero_div .call_to_action{float:none;width:250px;margin:25px auto}
+.text{text-align:left}
 }@media screen and (min-width:679px) and (max-width:1000px){.hero_div .hero_text{font-size:4em}
 }
