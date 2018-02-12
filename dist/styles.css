@@ -1,4 +1,4 @@
-body,html{overflow-x:hidden;width:100%}
+body,html{overflow-x:hidden !important;max-width:100%;position:relative}
 *{font-family:Karla,Futura,'Trebuchet MS',sans-serif}
 a{font-size:1.2em;color:#fff;transition:all .3s;letter-spacing:.05em;text-align:center}
 a:hover{color:#c2024f;transition:all .3s}
