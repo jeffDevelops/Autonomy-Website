@@ -7,13 +7,13 @@ a:hover{color:#c2024f;transition:all .3s}
 #city{position:absolute;z-index:-1;top:-60px;width:990px}
 #cloud_1{position:absolute;z-index:2;top:200px;animation:cloud_1 60s infinite linear}
 #cloud_2{position:absolute;z-index:2;top:225px;animation:cloud_2 90s infinite linear}
-@keyframes cloud_1{0%{transform:translateX(-1600px)}
-100%{transform:translateX(2000px)}
-}@keyframes cloud_2{0%{transform:translateX(-500px);opacity:1}
+@keyframes cloud_1{0%{left:-1600px}
+100%{left:2000px}
+}@keyframes cloud_2{0%{left:-500px;opacity:1}
 45%{opacity:1}
-50%{transform:translateX(2000px);opacity:0}
-51%{transform:translateX(-1000px);opacity:0}
-100%{transform:translateX(-500px);opacity:1}
+50%{left:2000px;opacity:0}
+51%{left:-1000px;opacity:0}
+100%{left:-500px;opacity:1}
 }.hero_div{position:absolute;z-index:3;top:200px;left:0;right:0;display:block;width:70%;margin:auto}
 .hero_div .hero_text{text-align:right;font-size:7em;color:#fff;font-weight:600}
 .hero_div .call_to_action{margin-top:50px;float:right;width:50%;font-weight:600;font-size:1.5em}
