@@ -1,5 +1,10 @@
 @import './scss_vars';
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 * {
   font-family: 'Karla', 'Futura', 'Trebuchet MS', sans-serif;
 }
@@ -45,7 +50,7 @@ a {
   position: absolute;
   z-index: 2;
   top: 200px;
-  animation: cloud_1 90s infinite linear;
+  animation: cloud_1 60s infinite linear;
 }
 
 #cloud_2 {
@@ -56,12 +61,13 @@ a {
 }
 
 @keyframes cloud_1 {
-  0% {transform: translateX(-1000px);}
+  0% {transform: translateX(-1600px);}
   100% {transform: translateX(2000px);}
 }
 
 @keyframes cloud_2 {
   0% {transform: translateX(-500px); opacity: 1;}
+  45% {opacity: 1}
   50% {transform: translateX(2000px); opacity: 0;}
   51% {transform: translateX(-1000px); opacity: 0;}
   100% {transform: translateX(-500px); opacity: 1;}
@@ -147,7 +153,7 @@ a {
   }
 
   .page_segue {
-    top: 550px;
+    top: 580px;
   }
 
   #city {
@@ -157,7 +163,7 @@ a {
   }
 
   .hero_div {
-    top: 250px;
+    top: 150px;
     width: 80%;
 
     .hero_text {
