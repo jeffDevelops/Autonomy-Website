@@ -148,7 +148,38 @@ a {
   }
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 400px) {
+  ul.nav.d-flex.justify-content-right {
+    display: none !important;
+  }
+
+  #city {
+    width: 450px;
+    top: 250px;
+    left: -20px;
+  }
+
+  .page_segue {
+    top: 530px;
+  }
+
+  .hero_div {
+    top: 100px;
+
+    .hero_text {
+      text-align: center;
+      font-size: 2.4em;
+    }
+
+    .call_to_action {
+      float: none;
+      width: 250px;
+      margin: 25px auto;
+    }
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 678px) {
   ul.nav.d-flex.justify-content-right {
     display: none !important;
   }
