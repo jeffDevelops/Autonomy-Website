@@ -3,20 +3,14 @@
 html, body {
   overflow-x: hidden !important;
   max-width: 100%;
-  min-height: 100%;
-  height: 100%;
 }
 
 body {
-  min-height: 100%;
-  height: 100%;
   position: relative;
 }
 
 html {
-  min-height: 100%;
-  height: 100%;
-  overflow-y: auto;
+  max-height: 100%;
   position: relative;
 }
 
@@ -43,7 +37,9 @@ a.call_to_action {
 }
 
 .sky {
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: -2;
   height: 900px;
   background-image: linear-gradient(to right,rgba(194, 2, 79, 1), rgba(255, 89, 79, 1));
@@ -61,7 +57,7 @@ a.call_to_action {
 
 #city {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: -60px;
   width: 990px;
 }
@@ -125,12 +121,6 @@ a.call_to_action {
   100% {opacity: 1;}
 }
 
-@keyframes transition_color {
-  0% {color: $gold;}
-  50% {color: $magenta;}
-  100% {color: $gold;}
-}
-
 .call_to_action {
   border: 2px solid #fff;
 
@@ -139,31 +129,37 @@ a.call_to_action {
     transition: all .3s;
     letter-spacing: .05em;
     background-color: #fff;
-    animation: transition_color 30s infinite;
   }
 }
 
 .navigation {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
-  padding: 25px;
-  background: transparent;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.0);
+  transition: all 1.8s;
 
   .logo {
     width: 200px;
   }
 }
 
+.navigation.scroll {
+  transition: all 1.8s;
+  background-color: $magenta;
+}
+
 .page_segue {
-  position: absolute;
-  z-index: 0;
-  top: 675px;
+  position: relative;
+  z-index: 2;
   width: 100%;
+  margin-top: 675px;
   min-height: 400px;
   background-color: #fff;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);  
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%); 
+  padding-top: 10px;
 }
 
 .section_heading {
@@ -213,6 +209,10 @@ footer {
     display: none !important;
   }
 
+ div.d-flex.nav.justify-content-between {
+   justify-content: center !important;
+ }
+
   #city {
     width: 450px;
     top: 250px;
@@ -220,7 +220,7 @@ footer {
   }
 
   .hero_div {
-    top: 100px;
+    top: 170px;
 
     .hero_text {
       text-align: center;
@@ -235,7 +235,7 @@ footer {
   }
 
   .page_segue {
-    top: 520px;
+    margin-top: 520px;
   }
 
   .section_heading {
@@ -251,8 +251,12 @@ footer {
     display: none !important;
   }
 
+  div.d-flex.nav.justify-content-between {
+    justify-content: center !important;
+  }
+
   .page_segue {
-    top: 540px;
+    margin-top: 540px;
   }
 
   #city {
