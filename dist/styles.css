@@ -1,7 +1,10 @@
-body,html{overflow-x:hidden !important;max-width:100%;position:relative}
-*{font-family:Karla,Futura,'Trebuchet MS',sans-serif}
+body,html{overflow-x:hidden !important;max-width:100%;min-height:100%;height:100%}
+body{min-height:100%;height:100%;position:relative}
+html{min-height:100%;height:100%;overflow-y:auto;position:relative}
+*{font-family:Karla,Futura,'Trebuchet MS',sans-serif;color:#3a3a3a}
 a{font-size:1.2em;color:#fff;transition:all .3s;letter-spacing:.05em;text-align:center}
 a:hover{color:#c2024f;transition:all .3s}
+a.call_to_action{margin-left:25px}
 .sky{position:relative;z-index:-2;height:900px;background-image:linear-gradient(to right,#c2024f,#ff594f)}
 .sky_effect{position:absolute;z-index:-1;top:0;width:100%;height:100%;background-color:#fcb13f;animation:transition_opacity 30s infinite}
 #city{position:absolute;z-index:0;top:-60px;width:990px}
@@ -17,7 +20,6 @@ a:hover{color:#c2024f;transition:all .3s}
 }.hero_div{position:absolute;z-index:3;top:200px;left:0;right:0;display:block;width:70%;margin:auto}
 .hero_div .hero_text{text-align:right;font-size:7em;color:#fff;font-weight:600}
 .hero_div .call_to_action{margin-top:50px;float:right;width:50%;font-weight:600;font-size:1.5em}
-.page_segue{position:absolute;z-index:1;top:675px;width:100%;height:1000px;background-color:#fff;-webkit-clip-path:polygon(0 14%,100% 0,100% 100%,0 100%);clip-path:polygon(0 14%,100% 0,100% 100%,0 100%)}
 @keyframes transition_opacity{0%{opacity:1}
 50%{opacity:0}
 100%{opacity:1}
@@ -28,14 +30,23 @@ a:hover{color:#c2024f;transition:all .3s}
 .call_to_action:hover{color:#c2024f;transition:all .3s;letter-spacing:.05em;background-color:#fff;animation:transition_color 30s infinite}
 .navigation{position:fixed;z-index:1;width:100%;padding:25px;background:0}
 .navigation .logo{width:200px}
+.page_segue{position:absolute;z-index:0;top:675px;width:100%;min-height:400px;background-color:#fff;-webkit-clip-path:polygon(0 7%,100% 0,100% 100%,0 100%);clip-path:polygon(0 7%,100% 0,100% 100%,0 100%)}
+.section_heading{margin-top:20px;color:#c2024f;font-weight:600;font-size:3em}
+.section_heading.right{text-align:right}
+.text{font-size:18px;text-align:justify}
+.row{margin-top:50px}
+.row.first{margin-top:95px}
+footer{background-color:#c2024f;position:relative;margin-top:75px;bottom:0;height:400px;width:100%;z-index:-2;-webkit-clip-path:polygon(0 28%,100% 0,100% 100%,0 100%);clip-path:polygon(0 28%,100% 0,100% 100%,0 100%)}
+footer .sky_effect{-webkit-clip-path:polygon(0 28%,100% 0,100% 100%,0 100%);clip-path:polygon(0 28%,100% 0,100% 100%,0 100%)}
 @media(max-width:400px){ul.nav.d-flex.justify-content-right{display:none !important}
 #city{width:450px;top:250px;left:-20px}
-.page_segue{top:530px}
 .hero_div{top:100px}
 .hero_div .hero_text{text-align:center;font-size:2.4em}
 .hero_div .call_to_action{float:none;width:250px;margin:25px auto}
+.page_segue{top:520px}
+.section_heading{color:#c2024f;font-weight:600;font-size:2em}
 }@media screen and (min-width:401px) and (max-width:678px){ul.nav.d-flex.justify-content-right{display:none !important}
-.page_segue{top:580px}
+.page_segue{top:540px}
 #city{width:500px;top:250px;left:-20px}
 .hero_div{top:150px;width:80%}
 .hero_div .hero_text{text-align:center;font-size:3em}
