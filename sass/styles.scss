@@ -33,8 +33,31 @@ a {
 }
 
 a.call_to_action {
+  padding: 5px 10px;
   margin-left: 25px;
 }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.0);
+  transition: all 1.8s;
+
+  .logo {
+    width: 180px;
+  }
+}
+
+.navigation.scroll {
+  transition: all 1.8s;
+  background-color: $peach;
+}
+
+
+// HOMEPAGE HERO
 
 .sky {
   position: absolute;
@@ -89,6 +112,67 @@ a.call_to_action {
   100% {left: -500px; opacity: 1;}
 }
 
+@keyframes transition_opacity {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+// OUR TEAM HERO
+#team {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('../assets/autonomy_team.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#scrim {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  animation: illuminate 1 1.6s forwards ease-in;
+}
+
+#lightbulb {
+  height: 100%;
+  width: 400px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 150px;
+  background-image: url('../assets/autonomy_lightbulb.svg');
+  background-repeat: no-repeat;
+  transform-origin: top center;
+  animation: swing_bulb 4s infinite linear;
+}
+
+@keyframes illuminate {
+  0% {opacity: 1;}
+  100% {opacity: .4;}
+}
+
+@keyframes swing_bulb {
+  0% {transform: rotate(.6deg);}
+  5% {transform: rotate(.5deg);}
+  45% {transform: rotate(-.5deg)}
+  50% {transform: rotate(-.6deg);}
+  55% {transform: rotate(-.5deg);}
+  95% {transform: rotate(.5deg);}
+  100% {transform: rotate(.6deg);}
+}
+
 .hero_div {
   position: absolute;
   z-index: 3;
@@ -115,39 +199,31 @@ a.call_to_action {
   }
 }
 
-@keyframes transition_opacity {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
+#team .hero_div {
+  top: 500px;
+  width: 80%;
+  
+  .hero_text {
+    text-align: left;
+  }
+
+  .call_to_action {
+    margin-top: 10px;
+    margin-left: 0;
+    max-width: 300px;
+    float: left;
+  }
 }
 
 .call_to_action {
   border: 2px solid #fff;
 
   &:hover {
-    color: $magenta;
+    color: $peach;
     transition: all .3s;
     letter-spacing: .05em;
     background-color: #fff;
   }
-}
-
-.navigation {
-  position: fixed;
-  z-index: 4;
-  width: 100%;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.0);
-  transition: all 1.8s;
-
-  .logo {
-    width: 200px;
-  }
-}
-
-.navigation.scroll {
-  transition: all 1.8s;
-  background-color: $magenta;
 }
 
 .page_segue {
@@ -162,9 +238,23 @@ a.call_to_action {
   padding-top: 10px;
 }
 
+.page_segue.reverse {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+
+  .container-fluid {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+}
+
+#team .page_segue {
+  top: -40px;
+}
+
 .section_heading {
   margin-top: 20px;
-  color: $magenta;
+  color: $peach;
   font-weight: 600;
   font-size: 3em;
 }
@@ -219,6 +309,20 @@ footer {
     left: -20px;
   }
 
+  #team {
+    left: 0;
+    top: -100px;
+    right: 0;
+    background-image: url('../assets/autonomy_team.svg');
+    background-size: cover;
+    background-position: left;
+    height: 800px;
+  }
+
+  #lightbulb {
+    top: 0px;
+  }
+
   .hero_div {
     top: 170px;
 
@@ -229,13 +333,31 @@ footer {
 
     .call_to_action {
       float: none;
-      width: 250px;
+      width: 220px;
       margin: 25px auto;
+    }
+  }
+
+  #team .hero_div {
+    top: 200px;
+
+    .hero_text {
+      text-align: center;
+    }
+
+    .call_to_action {
+      text-align: center;
+      margin: 0 auto;
+      float: none;
     }
   }
 
   .page_segue {
     margin-top: 520px;
+  }
+
+  #team .page_segue {
+    margin-top: 600px;
   }
 
   .section_heading {
@@ -269,6 +391,20 @@ footer {
     left: -20px;
   }
 
+  #team {
+    left: 0;
+    top: -100px;
+    right: 0;
+    background-image: url('../assets/autonomy_team.svg');
+    background-size: cover;
+    background-position: left;
+    min-height: 900px;
+  }
+
+  #lightbulb {
+    top: 60px;
+  }
+
   .hero_div {
     top: 150px;
     width: 80%;
@@ -280,9 +416,27 @@ footer {
 
     .call_to_action {
       float: none;
-      width: 250px;
+      width: 210px;
       margin: 25px auto;
     }
+  }
+
+  #team .hero_div {
+    top: 200px;
+
+    .hero_text {
+      text-align: center;
+    }
+
+    .call_to_action {
+      text-align: center;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+
+  #team .page_segue {
+    top: 100px;
   }
 
   .text {
@@ -291,8 +445,60 @@ footer {
 }
 
 @media screen and (min-width: 679px) and (max-width: 1000px) {
-  .hero_div .hero_text {
-    font-size: 4em;
+  .hero_div {
+  
+    .hero_text {
+      font-size: 4em;
+    }
   }
+
+  #team .hero_div {
+    top: 400px;
+  }
+
+  #team {
+    width: 100%;
+    height: auto;
+    min-height: 900px;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    background-image: url('../assets/autonomy_team.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  #lightbulb {
+    top: 70px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  #team {
+    width: 100%;
+    height: auto;
+    min-height: 1100px;
+    position: absolute;
+    left: 0;
+    top: -125px;
+    background-image: url('../assets/autonomy_team.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #lightbulb {
+    right: 15%;
+  }
+
+  .page_segue.reverse {
+    margin-top: 850px;
+    min-height: 600px;
+    -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%); 
+  }
+
+
 }
 
